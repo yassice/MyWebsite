@@ -1,0 +1,287 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* إخفاء الهيدر من جميع الصفحات */
+header {
+    display: none;
+}
+
+/* إظهار الهيدر في الصفحة الرئيسية فقط */
+body.home header {
+    display: block;
+    background: #1e3a8a;
+    padding: 20px 0;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1d4ed8;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px 20px;
+}
+
+.hero-section .text {
+    max-width: 50%;
+}
+
+.hero-section .text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .cta-btn {
+    padding: 10px 30px;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .cta-btn:hover {
+    background-color: #3b82f6;
+}
+
+/* Features */
+#features {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial {
+    max-width: 45%;
+    text-align: center;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Contact Form */
+#contact {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Newsletter */
+#newsletter {
+    background-color: #1e3a8a;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+#newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+#newsletter button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* FAQ */
+#faq {
+    padding: 60px 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.faq-item p {
+    font-size: 1rem;
+}
+
+/* Call to Action */
+#cta {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#cta .cta-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .socials {
+    margin-top: 20px;
+}
+
+footer .socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+footer .socials a:hover {
+    color: #3b82f6;
+}

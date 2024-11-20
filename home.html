@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALA PDF - Professional File Conversion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="home">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HALA PDF Logo" class="logo-img">
+                <h1>HALA PDF</h1>
+            </div>
+            <nav>
+                <a href="{{ url_for('route_convert_pdf_to_word') }}" class="btn">PDF to Word</a>
+                <a href="{{ url_for('route_convert_pdf_to_excel') }}" class="btn">PDF to Excel</a>
+                <a href="{{ url_for('route_convert_pdf_to_ppt') }}" class="btn">PDF to PowerPoint</a>
+                <a href="{{ url_for('route_convert_to_pdf') }}" class="btn">Convert to PDF</a>
+            </nav>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container hero-section">
+            <div class="text">
+                <h2>Welcome to <span>HALA PDF</span></h2>
+                <p>Convert your files effortlessly with cutting-edge tools. Enjoy fast, reliable, and accurate conversions.</p>
+                <a href="#features" class="cta-btn">Explore Features</a>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/conversion_tools.svg') }}" alt="File Conversion Tools">
+            </div>
+        </div>
+    </main>
+    
+    <section id="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-file-word"></i>
+                    <h3>PDF to Word</h3>
+                    <p>Effortlessly convert your PDFs into editable Word documents.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>PDF to Excel</h3>
+                    <p>Extract tables and data from PDFs into Excel spreadsheets.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <h3>PDF to PowerPoint</h3>
+                    <p>Transform your PDFs into stunning PowerPoint presentations.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Convert to PDF</h3>
+                    <p>Convert various file formats into universally accessible PDFs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"HALA PDF is a game-changer! It's so fast and accurate. I love it!"</p>
+                    <h3>- John Doe</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"I've been using it for months now. Works perfectly every time!"</p>
+                    <h3>- Jane Smith</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="/submit_form" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates about our tool and new features.</p>
+            <form action="/subscribe_newsletter" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How can I convert a PDF to Word?</h3>
+                <p>Simply upload your PDF file and select the 'PDF to Word' option. We'll take care of the rest.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there any size limit for uploads?</h3>
+                <p>No, you can upload files of any size, and our tool will process them quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta">
+        <div class="container">
+            <h2>Start Using HALA PDF Today</h2>
+            <p>Sign up now and start converting your files instantly!</p>
+            <a href="{{ url_for('route_register') }}" class="cta-btn">Sign Up Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HALA PDF. This site belongs to Hala - Yasser Ahmed Al-Mustaniri</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

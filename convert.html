@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Files - HALA PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HALA PDF</h1>
+            <nav>
+                <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('route_convert_pdf_to_word') }}" class="nav-link">Convert PDF to Word</a>
+                <a href="{{ url_for('route_convert_pdf_to_excel') }}" class="nav-link">Convert PDF to Excel</a>
+                <a href="{{ url_for('route_convert_pdf_to_ppt') }}" class="nav-link">Convert PDF to PowerPoint</a>
+                <a href="{{ url_for('route_convert_to_pdf') }}" class="nav-link">Convert to PDF</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container main-content">
+            <h2>Convert Your Files</h2>
+            <form action="{{ url_for('convert', filetype=filetype) }}" method="post" enctype="multipart/form-data" class="file-form">
+                <input type="file" name="file" accept=".pdf,.docx,.xlsx,.pptx" required class="file-input">
+                <button type="submit" class="submit-btn">Convert</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HALA PDF. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
